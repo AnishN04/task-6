@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Form</title>
+  <style>
+    body {
+  font-family: Arial, sans-serif;
+  background: #f0f4f8;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 400px;
+  background: white;
+  margin: 50px auto;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+}
+
+h2 {
+  text-align: center;
+  color: #333;
+}
+
+label {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  margin-top: 15px;
+  padding: 10px;
+  background: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  width: 100%;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button:hover {
+  background: #0056b3;
+}
+
+.error {
+  color: red;
+  font-size: 13px;
+  margin-top: 2px;
+  display: block;
+}
+
+.success {
+  color: green;
+  margin-top: 10px;
+  font-weight: bold;
+  text-align: center;
+}
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Contact Us</h2>
+    <form id="contactForm" novalidate>
+      <label for="name">Name</label>
+      <input type="text" id="name" placeholder="Your Name" />
+      <small class="error" id="nameError"></small>
+
+      <label for="email">Email</label>
+      <input type="email" id="email" placeholder="your@email.com" />
+      <small class="error" id="emailError"></small>
+
+      <label for="message">Message</label>
+      <textarea id="message" placeholder="Your message..."></textarea>
+      <small class="error" id="messageError"></small>
+
+      <button type="submit">Submit</button>
+      <p class="success" id="successMessage"></p>
+    </form>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
